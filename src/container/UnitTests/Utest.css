@@ -1,0 +1,79 @@
+.boxset {
+    display:flex;
+    flex-direction:row;
+    align-content: center;
+    justify-content: center;
+}
+
+.boxset > Div {
+    display: block;
+    width:32%;
+    padding:1em 2em 2em 2em;
+
+}
+.inner-card {
+    display:block;
+    height:auto;
+    background-color:#ffffff;
+}
+
+.icon {
+    
+    height:2.5em;
+    width:2.5em;
+   
+}
+.p-chart {
+    position: relative;
+
+}
+
+.card-header {
+    display:inherit;
+    align-items:center;
+   justify-content:left;
+    width:100%;
+    height:3em;
+}
+
+.widge-box {
+    display:inherit;
+    min-height:7em;
+  width:90%
+}
+
+.actionitems {
+display:flex;
+align-content: center;
+justify-items:center;
+height:auto;
+
+}
+
+.actionitems p {
+    font-size: .7em;
+    font-weight: 300;
+}
+
+h5 {
+    font-size: 1em;
+    padding-top:0.5em;
+
+}
+
+.left{
+    display: inline-block;
+    float:left;
+}
+.right{
+    display: inline-block;
+    float:right;
+}
+ /
+ /*Large devices (desktops, 992px and up)*/
+ @media (min-width: 992px) { 
+
+
+
+
+ }

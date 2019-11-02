@@ -1,0 +1,19 @@
+<svg id="DrawerPullGrp" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="450" height="14" viewBox="0 0 450 14">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#7995bf" stop-opacity="0.153"/>
+      <stop offset="1" stop-color="#595959"/>
+    </linearGradient>
+  </defs>
+  <g id="PullBase" fill="url(#linear-gradient)">
+    <path d="M 449.5 13.5 L 0.5 13.5 L 0.5 5.133333206176758 C 0.5 3.984388828277588 1.569111108779907 2.826555490493774 3.43327784538269 1.956611156463623 C 5.44611120223999 1.017277836799622 8.133333206176758 0.5 11 0.5 L 439 0.5 C 441.8666687011719 0.5 444.553955078125 1.017277836799622 446.5667114257812 1.956611156463623 C 448.4308776855469 2.826555490493774 449.5 3.984388828277588 449.5 5.133333206176758 L 449.5 13.5 Z" stroke="none"/>
+    <path d="M 11 1 C 8.204833984375 1 5.592681884765625 1.500666618347168 3.64471435546875 2.409722328186035 C 1.963958740234375 3.194055557250977 1 4.18677806854248 1 5.133333206176758 L 1 13 L 449 13 L 449 5.133333206176758 C 449 4.18677806854248 448.0360412597656 3.194055557250977 446.3552856445312 2.409722328186035 C 444.4072875976562 1.500666618347168 441.7951049804688 1 439 1 L 11 1 M 11 0 L 439 0 C 445.0751037597656 0 450 2.298277854919434 450 5.133333206176758 C 450 11.70172214508057 450 14 450 14 L 0 14 C 0 14 0 11.70172214508057 0 5.133333206176758 C 0 2.298277854919434 4.924835205078125 0 11 0 Z" stroke="none" fill="#595959"/>
+  </g>
+  <path id="Path_42" data-name="Path 42" d="M0,0H449" transform="translate(0.5 10.5)" fill="none" stroke="#595959" stroke-width="1"/>
+  <line id="Line_3" data-name="Line 3" x2="449" transform="translate(0.5 10.967)" fill="none" stroke="#595959" stroke-width="1"/>
+  <line id="Line_4" data-name="Line 4" x2="449" transform="translate(0.5 9.567)" fill="none" stroke="#595959" stroke-width="1"/>
+  <path id="Path_41" data-name="Path 41" d="M0,0,443.667.706" transform="translate(3.5 3.5)" fill="none" stroke="#595959" stroke-width="1"/>
+  <path id="Path_43" data-name="Path 43" d="M0,0H449" transform="translate(0.5 8.167)" fill="none" stroke="#595959" stroke-width="1"/>
+  <line id="Line_7" data-name="Line 7" x2="449" transform="translate(0.5 6.3)" fill="none" stroke="#595959" stroke-width="1"/>
+  <line id="Line_8" data-name="Line 8" x2="449" transform="translate(0.5 3.967)" fill="none" stroke="#595959" stroke-width="1"/>
+</svg>
