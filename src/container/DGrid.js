@@ -25,7 +25,7 @@ const Widgies = [<GeoFencing/>, <StorageStats/>, <FailedAuths/>, <DeniedDocs/>,<
 
 class ToolBoxItem extends React.Component {
   componentDidMount(){
-   document.body.style.backgroundImage = "none !important"; // Set the style
+   document.body.style.backgroundImage = "none"; // Set the style
     document.body.className="body-component-a"; // Or set the class
 }
   render() {

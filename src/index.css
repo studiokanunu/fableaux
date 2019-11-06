@@ -5,6 +5,8 @@ body {
   font-family: 'Big Shoulders Text', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-image: url(./img/HerndonReston.png);
+  
 
 }
 

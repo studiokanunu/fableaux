@@ -19,6 +19,5 @@ window.RenderApp = (config) => {
     document.getElementById("root")
   );
 }
-
 // unregister() to register() below. 
 serviceWorker.unregister();

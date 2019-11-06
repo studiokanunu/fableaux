@@ -1,8 +1,9 @@
 .Home .lander {
     padding: 110px 0 10px 0;
     height:80em;
-    text-align: center; background-image: url(../img/HerndonReston.png);
-  }
+    text-align: center; 
+
+}
   
   .Home .lander h1 {
     padding-top:10px;
