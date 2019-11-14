@@ -137,11 +137,15 @@ export default class BarChart extends Component {
         };*/
 
         return (
-            <div>
+            
 
                 <div>
                    
                     <Chart type="bar" data={data} />
+                    <div className="actionitems">
+{/*actionable controls on the */}
+
+</div>
 
                     {/*<h3>Horizontal</h3>
                     <Chart type="horizontalBar" data={data} />
@@ -152,7 +156,7 @@ export default class BarChart extends Component {
                     <h3>Stacked</h3>
                     <Chart type="bar" data={stackedData} options={stackedOptions} />*/}
                     </div>
-            </div>
+            
         )
     }
 }
