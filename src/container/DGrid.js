@@ -68,7 +68,7 @@ class ToolBox extends React.Component {
 class AddRemove extends React.Component {
   static defaultProps = {
     className: "layout",
-    rowHeight: 30,  
+    rowHeight:55,  
     onLayoutChange: function() {},
     cols: { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 },
     initialLayout: generateLayout()
@@ -215,12 +215,10 @@ function generateLayout() {
     return {
       x: (_.random(0, 5) * 2) % 12,
       y: Math.floor(i) * y,
-      w: 2,
-      h: 6,
+      w: 1.75,
+      h: 3.25,
       i: i.toString(),
       static: Math.random() < 0.05
     };
   });
 }
-
-
