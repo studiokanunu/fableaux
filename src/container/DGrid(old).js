@@ -1,31 +1,31 @@
 import React from "react";
 import _ from "lodash";
 import { Responsive, WidthProvider } from "react-grid-layout";
-import  Dicons from "./Dicons.js"; //Drawer Icons file
+import  Dicons from "../svg/Dicons"; //Drawer Icons file
 import "./Dgrid.css";
 import './UnitTests/Utest.css';
 import './UnitTests/common.css';
-import GeoFencing from './UnitTests/GeoFence';
-import StorageStats from './UnitTests/Storage';
-import FailedAuths from './UnitTests/FailedAuths';
-import DeniedDocs from './UnitTests/DeniedDoc';
-import Ipfence from './UnitTests/IpFencing';
-import EmailStats from './UnitTests/Email';
-import MostActiveDocs from './UnitTests/MostActiveDocs';
-import SubscriptStats from './UnitTests/Subscriptions';
-import DeniedByDocs from './UnitTests/DeniedByDoc';
-import AccDeniedUser from './UnitTests/AccDeniedUsr';
+import GeoFenceMap from './Components/GMapper'; //No Load Vaultize Data for this?
+import StorageStats from './UnitTests/Storage'; // No Load
+import FailedAuths from './UnitTests/FailedAuths'; //Vaultize P1
+import DeniedDocs from './UnitTests/DeniedDoc'; //Vaultize, re-purpose for DRM
+import Ipfence from './UnitTests/IpFencing';// No Load
+import EmailStats from './UnitTests/Email'; //No Load
+import MostActiveDocs from './UnitTests/MostActiveDocs'; //No Load
+import SubscriptStats from './UnitTests/Subscriptions'; //No Load
+import DeniedByDocs from './UnitTests/DeniedByDoc'; //Vaultize P1
+import AccDeniedUser from './UnitTests/AccDeniedUsr'; //Vaultize P1
 
 const ResponsiveReactGridLayout = WidthProvider(Responsive);
 
 // the drawer holds the Data Views which we will expand
 const widget=["GeoFence","Storage","FailedAuth","DeniedDocType","AccessDeniedUser", "IpFencing", "Email", "MostActiveDocs", "Subscriptions", "DeniedByDoc"];
 
-const Widgies = [<GeoFencing/>, <StorageStats/>, <FailedAuths/>, <DeniedDocs/>,<AccDeniedUser/>, <Ipfence/>,<EmailStats/>,<MostActiveDocs/>,<SubscriptStats/>,<DeniedByDocs/>,];
+const Widgies = [<GeoFenceMap/>, <StorageStats/>, <FailedAuths/>, <DeniedDocs/>,<AccDeniedUser/>, <Ipfence/>,<EmailStats/>,<MostActiveDocs/>,<SubscriptStats/>,<DeniedByDocs/>,];
 
 class ToolBoxItem extends React.Component {
   componentDidMount(){
-   document.body.style.backgroundImage = "none"; // Set the style
+   document.body.style.backgroundImage='none'; // Set the style
     document.body.className="body-component-a"; // Or set the class
 }
   render() {
@@ -64,48 +64,44 @@ class ToolBox extends React.Component {
     );
   }
 }
-//Covers the row behavior badly
+
 class AddRemove extends React.Component {
   static defaultProps = {
     className: "layout",
-    rowHeight: 30,
+    rowHeight: "30%",  
     onLayoutChange: function() {},
     cols: { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 },
     initialLayout: generateLayout()
   };
 
   state = {
-    currentBreakpoint: "lg",
-    compactType: "vertical",
+    currentBreakpoint: "sm",
+    compactType: "horizontal",
     mounted: false,
-    layouts: { lg: this.props.initialLayout },
-    toolbox: { lg: [] }
+    layouts: { sm: [] }, //Initially, everything is in "the Drawer" Sprint 3  DONE 10/23/19 // Need to hijack this for default layout Sprint 4
+    toolbox: { sm: this.props.initialLayout }
   };
 
   componentDidMount() {
     this.setState({ mounted: true });
   }
- /*Somewhere below here goes the target for the DataType Needs a wrapper based on an array that will have a specific layout as the array value */
-  generateDOM() {
+   generateDOM() {
     return _.map(this.state.layouts[this.state.currentBreakpoint], l => {
       return (
-        <div key={l.i} className="basecard" id={widget[l.i]}>
-          <div className="hide-button" onClick={this.onPutItem.bind(this, l)}>
+<div className="basecard" key={l.i} id={widget[l.i]}>
+<div className="hide-button" onClick={this.onPutItem.bind(this, l)}>
             &times;
           </div>
           <div> 
-          {Widgies[l.i]}
-          
-          
+          {Widgies[l.i]} {/*This is the array index for the icon's content*/}
+           
           </div>
-          <span className="text" title="Resize, Move, Close">
-              
-            </span>
+          
         </div>
       );
     });
   }
- /*Somewhere above here goes the target for the DataType */
+
   onBreakpointChange = breakpoint => {
     this.setState(prevState => ({
       currentBreakpoint: breakpoint,
@@ -194,7 +190,7 @@ class AddRemove extends React.Component {
           onBreakpointChange={this.onBreakpointChange}
           onLayoutChange={this.onLayoutChange}
           // WidthProvider option
-          measureBeforeMount={false}
+          measureBeforeMount={true}
           // Annimation needs work
           // along with the Dragons.
           useCSSTransforms={this.state.mounted}
@@ -208,18 +204,19 @@ class AddRemove extends React.Component {
 }
 
 export default AddRemove;
-//this function needs closer attention//
 
 function generateLayout() {
-  return _.map(_.range(0, 9), function(item, i) {
-    var y = Math.ceil(Math.random() * 4) + 1;
+  return _.map(_.range(0, 10), function(item, i) {
+    var y = Math.ceil(Math.random() * 1) + 1;
     return {
       x: (_.random(0, 5) * 2) % 12,
-      y: Math.floor(i / 6) * y,
-      w: 2,
-      h: y,
+      y: Math.floor(i) * y,
+      w: 1.75,
+      h: 3.25,
       i: i.toString(),
       static: Math.random() < 0.05
     };
   });
 }
+
+

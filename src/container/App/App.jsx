@@ -1,18 +1,11 @@
-// eslint-disable-next-line no-unused-vars
 import React, { Component } from "react";
-// eslint-disable-next-line no-unused-vars
 import { Route, Switch} from "react-router-dom";
-// eslint-disable-next-line no-unused-vars
 import { LinkContainer } from "react-router-bootstrap";
 import image from '../../svg/NavIcon.svg';
-// eslint-disable-next-line no-unused-vars
 import {Collapse, Navbar, NavbarToggler, NavbarBrand, Nav, NavItem, NavLink } from 'reactstrap';
-
 import { history } from '../../_helpers';
 import { authenticationService } from '../../_services';
-// eslint-disable-next-line no-unused-vars
 import { PrivateRoute } from '../../_components';
-
 import Home from "../Home";
 import { Login } from "../Login";
 import AddRemove from "../DGrid";

@@ -5,10 +5,12 @@ body {
   font-family: 'Big Shoulders Text', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-image: url(./img/HerndonReston.png);
-  
 
 }
+
+  .control {
+    z-index: 1000;
+  }
 
 .collapse-show {
 display:block;
@@ -20,7 +22,10 @@ z-index: 3000;
  
 }
 
-
+.appcontainer {
+height:100%;
+width:auto!important;
+}
 
 a:hover{ text-decoration:none;
   color:#1c1f2a!important;}
@@ -31,14 +36,13 @@ a:hover{ text-decoration:none;
   }
   
 .navbar {
-  background-color:#2d68c4;
+  background-color:#2D68C4;
   display: inline-flexbox;
   width:inherit;
   height:50px;
   padding-left: 12px;
   padding-right: 22px;
   margin:0;
-  z-index:90000;
 }
 
 .ml-auto {
@@ -113,7 +117,7 @@ label:focus,
 @media (max-width: 576px) { 
 
   .nav-link{
-    color:#2d68c4;
+    color:#2D68C4;
     font-family: 'Big Shoulders Text', sans-serif;
     font-size:.9em;
     font-weight: 700;

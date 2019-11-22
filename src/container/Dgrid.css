@@ -1,8 +1,12 @@
 /*Drawer item ID */
-#GeoFence, #Storage, #FailedAuth, #DeniedDocType, #AccessDeniedUser, #IpFencing, #Email, #MostActiveDocs, #Subscriptions, #DeniedByDoc{
+ #GeoFence, #Storage, #FailedAuth, #DeniedDocType, #AccessDeniedUser, #IpFencing, #Email, #MostActiveDocs, #Subscriptions, #DeniedByDoc{
   padding:0.5em;
     height:3.1em;
     width:3.1em;
+ 
+
+   
+
     }
 
  .footer {
@@ -11,41 +15,44 @@
    align-items: center;
  }
    
-    .basecard {
+  .basecard {
         border-radius: 0px 9px 0px 9px;
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-        width:auto;
-        height:auto!important;
+        height:auto !important;
+        min-width:320px;
+        padding:2em;
+       
         }
-
-        
-        .react-grid-layout {
+.react-grid-layout {  
+          height:auto;
             position: relative;
-            transition: height 200ms ease;
+           
           }
-          .react-grid-item {
+.react-grid-item {
+
+            position:relative;
             transition: all 200ms ease;
             transition-property: left, top;
           }
-          .react-grid-item.cssTransforms {
+.react-grid-item.cssTransforms {
             transition-property: transform;
           }
-          .react-grid-item.resizing {
+.react-grid-item.resizing {
             z-index: 1;
             will-change: width, height;
           }
           
-          .react-grid-item.react-draggable-dragging {
+.react-grid-item.react-draggable-dragging {
             transition: none;
             z-index: 3;
             will-change: transform;
           }
           
-          .react-grid-item.dropping {
+.react-grid-item.dropping {
             visibility: hidden;
           }
           
-          .react-grid-item.react-grid-placeholder {
+.react-grid-item.react-grid-placeholder {
             background:#636770;
             opacity: 0.2;
             transition-duration: 100ms;
@@ -57,7 +64,7 @@
             user-select: none;
           }
           
-          .react-grid-item > .react-resizable-handle {
+.react-grid-item > .react-resizable-handle {
             position: absolute;
             width: 20px;
             height: 20px;
@@ -66,7 +73,7 @@
             cursor: se-resize;
           }
           
-          .react-grid-item > .react-resizable-handle::after {
+.react-grid-item > .react-resizable-handle::after {
             content: "";
             position: absolute;
             right: 3px;
@@ -78,33 +85,30 @@
           }
           
           
-          #content {
-            width: 100%;
+#content {
+    width: 100%;
           }
-          .react-grid-layout {
+ .react-grid-layout {
+            height:auto;
             background:none;
+            position: relative;
           }
-          .layoutJSON {
-            background: #ffffff;
-            border: 1px solid black;
-            margin: 10px;
-            padding: 10px;
-          }
-          .columns {
+     
+.columns {
             -moz-columns: 120px;
             -webkit-columns: 120px;
             columns: 120px;
           }
-          .react-grid-item {
+.react-grid-item {
             box-sizing: border-box;
           }
   
-          /* this is the item bg color - needs a breakpoint for a bg delta */
-          .react-grid-item:not(.react-grid-placeholder) {
+ /* this is the item bg color - needs a breakpoint for a bg delta */
+ .react-grid-item:not(.react-grid-placeholder) {
             background: #ffffff;
            
           }
-          .react-grid-item.resizing {
+.react-grid-item.resizing {
             opacity: 0.9;
           }
           .react-grid-item.static {

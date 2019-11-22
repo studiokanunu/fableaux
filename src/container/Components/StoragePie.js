@@ -1,11 +1,10 @@
 import React, {Component} from 'react';
 import {Chart} from 'primereact/chart';
-  
-export default class DDDonut extends Component {
+export default class StoragePie extends Component {
 
     render() {
         const data = {
-            labels: ['World Class Jersey','Ukrainian Affair','DNCDraft'],
+            labels: ['Johnny','Mary','Clover'],
             datasets: [
                 {
                     data: [300, 50, 100],
@@ -21,28 +20,13 @@ export default class DDDonut extends Component {
                     ]
                 }]    
             };
-         const pieOptions = {
-            legend: {
-                position: 'bottom'
-            }
-        };
-        return (
-            <div>
-         
-                    <Chart type="doughnut" data={data} options={pieOptions} />
-                    
-                    <div className="actionitems">
-{/*actionable controls on the */}
-
-</div>
-                </div>
-
-               
-
-
-
-            
-        )
+            const pieOptions = {
+                legend: {
+                    position: 'bottom'
+                }
+            };
+            return (
+                <Chart type="pie" data={data} options= {pieOptions}  />
+            )
     }
 }
-//DeniedDocDefault-DoNut

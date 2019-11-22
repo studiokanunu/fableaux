@@ -35,6 +35,7 @@ export class WowMapper extends Component {
             style={mapStyles}
             styles={styles}
             initialCenter={{ lat: 38.444, lng: -77.176}}
+            disableDefaultUI= {true}
           >
             {this.displayMarkers()}
           </Map>

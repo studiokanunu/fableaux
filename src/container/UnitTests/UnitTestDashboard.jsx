@@ -10,7 +10,7 @@ render() {
   return (
     <div>
           
-<div className="mapBox"><GoogleApiWrapper /></div>
+<div><GoogleApiWrapper /></div>
 <div><AddRemove /></div>
 
  

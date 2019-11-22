@@ -6,6 +6,8 @@ export default class BarChart extends Component {
     render() {
         const data = {
             labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+           
+        
             datasets: [
                 {
                     label: 'My First dataset',
@@ -18,6 +20,16 @@ export default class BarChart extends Component {
                     data: [28, 48, 40, 19, 86, 27, 90]
                 }
             ]    
+        };
+        const chartOptions = {
+            legend: {
+                position: 'bottom',
+                labels: {
+                    boxWidth:20,
+                }
+            },
+
+            
         };
 
         /*const multiAxisData = {
@@ -137,15 +149,11 @@ export default class BarChart extends Component {
         };*/
 
         return (
-            
+        
 
                 <div>
                    
-                    <Chart type="bar" data={data} />
-                    <div className="actionitems">
-{/*actionable controls on the */}
-
-</div>
+                    <Chart type="bar" data={data} options= {chartOptions} />
 
                     {/*<h3>Horizontal</h3>
                     <Chart type="horizontalBar" data={data} />
