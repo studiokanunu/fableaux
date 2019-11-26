@@ -54,13 +54,13 @@
 // export default GigaNav
 
 import React from 'react';
-//import image from './svg/NavIcon.svg';
+import image from './svg/NavIcon.svg';
 import { LinkContainer } from "react-router-bootstrap";
 import {
   Collapse,
   Navbar,
   NavbarToggler,
-  //NavbarBrand,
+  NavbarBrand,
   Nav,
   NavItem,
   NavLink
@@ -86,8 +86,8 @@ class GigaNav extends React.Component {
     return (
       <div>
         <Navbar expand="md">
-        {/*<NavbarBrand href="/">
-        <img src={ image } id="logo" alt="GigaCloud"/></NavbarBrand>*/}
+        <NavbarBrand href="/">
+        <img src={ image } id="logo" alt="GigaCloud"/></NavbarBrand>
           <NavbarToggler onClick={this.toggle} />
           <Collapse isOpen={this.state.isOpen} navbar>
             <Nav className="ml-auto" navbar>
