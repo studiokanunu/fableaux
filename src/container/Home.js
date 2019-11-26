@@ -6,7 +6,7 @@ export default class Home extends Component {
     return (
       <div className="Home">
         <div className="lander fluid">
-          <span className="thickerType">Giga</span><span className="thinType">Cloud</span>
+          <span className="thickerType">Fab</span><span className="thinType">leaux</span>
           <p>Where the Wow Begins!</p>
         </div>
         
