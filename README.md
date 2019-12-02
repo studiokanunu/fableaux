@@ -1,9 +1,10 @@
-# SilverMoon Data Visualization
+# SFableaux Data Visualization
 
 ![Default Screen](./briefers/capture1.png)
 
-SilverMoon is a 100% bootstrap-free implementation of React-Grid in conjunction with the Google API as an underlying base-layer.
+Fableaux is a 100% bootstrap-free implementation of React-Grid in conjunction with the Google's Map API as an underlying base-layer that was inspired by Tableaux. Our aim here is to provide a similar functionality: putting lipstick on any data object that requires sophisticated, meaningful display.
 
-Geo mapping shows data in space and time, which is the base layer of the User Experience (UX). Customizing the Google Map API User Interface (UI) is our solution to achieve this intuitive  display functionality.
+Our user experience (UX)revolves around geo-mapping user defined "important" data, in the prototype cybersecurity centric events, hand in hand typical data displays (pie, doughnut, bar charts etc.) that can be added and removed from the viewport. STRML react-grid is leveraged for this purpose, in addition to React PrimeFaces widgets.
 
-But that's not the only way to view things of course! Floating widgets over the map, a different dataview in conjunction with a geo mapped presentation, seems like the cat's whiskers.
+ 
+ 
