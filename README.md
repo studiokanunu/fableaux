@@ -1,4 +1,4 @@
-# SFableaux Data Visualization
+# Fableaux Data Visualization
 
 ![Default Screen](./briefers/capture1.png)
 
