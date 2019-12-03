@@ -44,6 +44,6 @@ export class WowMapper extends Component {
   }
   
   export default GoogleApiWrapper({
-    apiKey:'AIzaSyBg5XAPjj_dNFRN9jL6QhLGSwRATjyuk5c'
+    apiKey:'NeedarealGoogleAPIhere'
   })(WowMapper);
   
