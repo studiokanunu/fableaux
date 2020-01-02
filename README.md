@@ -2,7 +2,7 @@
 
 ![Default Screen](./briefers/capture1.png)
 
-Inspired by Tableaux, **Fableaux** is a 100% bootstrap-free implementation of React Native in conjunction with Google's Map API as an underlying base-layer.
+Inspired by Tableaux, **Fableaux** is a 100% bootstrap-free implementation of React in conjunction with Google's Map API as an underlying base-layer.
 
 Our aim here is to provide a similar functionality: putting lipstick on any data object that requires sophisticated, meaningful display, _while correlating geo-location_.
 
