@@ -24,13 +24,9 @@ const widget=["GeoFence","Storage","FailedAuth","DeniedDocType","AccessDeniedUse
 const Widgies = [<GeoFencing/>, <StorageStats/>, <FailedAuths/>, <DeniedDocs/>,<AccDeniedUser/>, <Ipfence/>,<EmailStats/>,<MostActiveDocs/>,<SubscriptStats/>,<DeniedByDocs/>,];
 
 class ToolBoxItem extends React.Component {
-  componentDidMount(){
-   document.body.style.backgroundImage = "none"; // Set the style
-    document.body.className="body-component-a"; // Or set the class
-}
   render() {
     return (
-      <div
+<div
         className="toolbox__items__item "
         onClick={this.props.onTakeItem.bind(undefined, this.props.item)} id={widget[this.props.item.i]} >
 <img src={ Dicons[this.props.item.i] } alt=""/> 
@@ -42,50 +38,43 @@ class ToolBoxItem extends React.Component {
 class ToolBox extends React.Component {
   render() {
     return (
-      <div className="footer">
-
-<div className="toolbox">
-
-<div className="toolbox__items">
-  {this.props.items.map(item => (
-    <ToolBoxItem
-      key={item.i}
-      item={item}
-      onTakeItem={this.props.onTakeItem}
-    />
-   
-  ))}
- 
-</div>
-</div>
+      <div className="toolbox">
+        <span className="toolbox__title">Toolbox</span>
+        <div className="toolbox__items">
+          {this.props.items.map(item => (
+            <ToolBoxItem
+              key={item.i}
+              item={item}
+              onTakeItem={this.props.onTakeItem}
+            />
+          ))}
+        </div>
       </div>
-    
-   
     );
   }
 }
-//Covers the row behavior badly
-class AddRemove extends React.Component {
-  static defaultProps = {
-    className: "layout",
-    rowHeight: 30,
-    onLayoutChange: function() {},
-    cols: { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 },
-    initialLayout: generateLayout()
-  };
+
+export default class ToolboxLayout extends React.Component {
+    static defaultProps = {
+        preventCollision: true,
+        className: "layout",
+        rowHeight: 150,
+        onLayoutChange: function() {},
+        cols: { lg: 12, md: 10, sm: 6, xs: 4, xxs: 2 },
+        initialLayout: generateLayout()
+      };
 
   state = {
-    currentBreakpoint: "lg",
-    compactType: "horizontal",
-    mounted: true,
-    layouts: { lg: this.props.initialLayout },
+    currentBreakpoint: "md",
+    //mounted: false,
+    layouts: { md: this.props.initialLayout },
     toolbox: { lg: [] }
   };
 
   componentDidMount() {
     this.setState({ mounted: true });
   }
- /*Somewhere below here goes the target for the DataType Needs a wrapper based on an array that will have a specific layout as the array value */
+
   generateDOM() {
     return _.map(this.state.layouts[this.state.currentBreakpoint], l => {
       return (
@@ -105,7 +94,7 @@ class AddRemove extends React.Component {
       );
     });
   }
- /*Somewhere above here goes the target for the DataType */
+
   onBreakpointChange = breakpoint => {
     this.setState(prevState => ({
       currentBreakpoint: breakpoint,
@@ -119,7 +108,7 @@ class AddRemove extends React.Component {
     }));
   };
 
-  onCompactTypeChange = () => {
+ onCompactTypeChange = () => {
     const { compactType: oldCompactType } = this.state;
     const compactType =
       oldCompactType === "horizontal"
@@ -175,14 +164,13 @@ class AddRemove extends React.Component {
 
   onNewLayout = () => {
     this.setState({
-      layouts: { lg: generateLayout() }
+      layouts: { md: generateLayout() }
     });
   };
 
   render() {
     return (
       <div>
-
         <ToolBox
           items={this.state.toolbox[this.state.currentBreakpoint] || []}
           onTakeItem={this.onTakeItem}
@@ -194,21 +182,18 @@ class AddRemove extends React.Component {
           onBreakpointChange={this.onBreakpointChange}
           onLayoutChange={this.onLayoutChange}
           // WidthProvider option
+          // I like to have it animate on mount. If you don't, delete `useCSSTransforms` (it's default `true`)
           measureBeforeMount={true}
-          // Annimation needs work
-          // along with the Dragons.
           useCSSTransforms={this.state.mounted}
           compactType={this.state.compactType}
-          preventCollision={!this.state.compactType}>
+          preventCollision={!this.state.compactType}
+        >
           {this.generateDOM()}
         </ResponsiveReactGridLayout>
       </div>
     );
   }
 }
-
-export default AddRemove;
-//this function needs closer attention//
 
 function generateLayout() {
   return _.map(_.range(0, 9), function(item, i) {
